@@ -30,12 +30,12 @@ var Service = function(params) {
   var express = params.webweaverService.express;
 
   params.webinjectService.enqueue({
-    interceptUrls: ['/webinject-bdd/*'],
+    interceptUrls: ['/webinject-bdd/index'],
     headSuffixTags: {
       sidebarStyle: {
         type: 'css',
         text: [
-          util.format("<link href='%s/assets/sidebar/css/style.css' rel='stylesheet' type='text/css'/>", contextPath)
+          util.format("<link href='%s/css/style.css' rel='stylesheet' type='text/css'/>", contextPath)
         ]
       }
     }
