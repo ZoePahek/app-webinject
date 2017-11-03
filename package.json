@@ -1,6 +1,6 @@
 {
   "name": "app-webinject",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Devebot application web-inject layerware",
   "homepage": "https://github.com/apporo/app-webinject.git",
   "author": {
@@ -22,13 +22,13 @@
     "devebot-plugin"
   ],
   "peerDependencies": {
-    "app-webserver": "^0.1.13",
-    "devebot": "^0.1.23"
+    "app-webweaver": "^0.2.1",
+    "devebot": "^0.2.0"
   },
   "dependencies": {
-    "app-webserver": "^0.1.13",
+    "app-webweaver": "^0.2.1",
     "cheerio": "^0.22.0",
-    "devebot": "^0.1.23",
+    "devebot": "^0.2.0",
     "express-interceptor": "^1.2.0",
     "tamper": "^0.1.0"
   },

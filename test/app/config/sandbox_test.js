@@ -4,7 +4,7 @@ module.exports = {
       contextPath: '/webinject-bdd',
       interceptor: 'tamper'
     },
-    appWebserver: {
+    appWebweaver: {
       defaultRedirectUrl: '/webinject-bdd/index'
     }
   }
