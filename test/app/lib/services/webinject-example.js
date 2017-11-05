@@ -21,6 +21,18 @@ var Service = function(params) {
   var express = params.webweaverService.express;
 
   params.webinjectService.enqueue({
+    interceptUrls: ['/webinject-bdd/index(.*)'],
+    bodySuffixTags: {
+      sidebarStyle: {
+        type: 'script',
+        text: [
+          util.format("<script src='%s/js/code.js'></script>", contextPath)
+        ]
+      }
+    }
+  });
+
+  params.webinjectService.enqueue({
     interceptUrls: ['/webinject-bdd/index', '/webinject-bdd/index1.html'],
     headSuffixTags: {
       sidebarStyle: {
