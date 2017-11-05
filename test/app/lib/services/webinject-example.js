@@ -21,16 +21,28 @@ var Service = function(params) {
   var express = params.webweaverService.express;
 
   params.webinjectService.enqueue({
-    interceptUrls: ['/webinject-bdd/index'],
+    interceptUrls: ['/webinject-bdd/index', '/webinject-bdd/index1.html'],
     headSuffixTags: {
       sidebarStyle: {
         type: 'css',
         text: [
-          util.format("<link href='%s/css/style.css' rel='stylesheet' type='text/css'/>", contextPath)
+          util.format("<link href='%s/css/style1.css' rel='stylesheet' type='text/css'/>", contextPath)
         ]
       }
     }
-  })
+  });
+
+  params.webinjectService.enqueue({
+    interceptUrls: ['/webinject-bdd/index', '/webinject-bdd/index2.html'],
+    headSuffixTags: {
+      sidebarStyle: {
+        type: 'css',
+        text: [
+          util.format("<link href='%s/css/style2.css' rel='stylesheet' type='text/css'/>", contextPath)
+        ]
+      }
+    }
+  });
 
   var router = new express();
   router.set('views', __dirname + '/../../views');
