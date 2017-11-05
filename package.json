@@ -21,12 +21,12 @@
   ],
   "peerDependencies": {
     "app-webweaver": "^0.2.1",
-    "devebot": "^0.2.0"
+    "devebot": "^0.2.1"
   },
   "dependencies": {
     "app-webweaver": "^0.2.1",
     "cheerio": "^0.22.0",
-    "devebot": "^0.2.0",
+    "devebot": "^0.2.1",
     "express-interceptor": "^1.2.0",
     "path-to-regexp": "^2.1.0",
     "tamper": "^0.1.0"

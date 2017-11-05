@@ -2,9 +2,10 @@
 
 var app = require('devebot').launchApplication({
   appRootPath: __dirname
-}, [
-  '../../index.js'
-]);
+}, [{
+  name: 'app-webinject',
+  path: '../../index.js'
+}]);
 
 if (require.main === module) app.server.start();
 

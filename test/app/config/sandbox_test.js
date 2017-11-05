@@ -1,4 +1,7 @@
 module.exports = {
+  application: {
+    contextPath: '/webinject-bdd'
+  },
   plugins: {
     appWebinject: {
       contextPath: '/webinject-bdd',

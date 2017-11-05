@@ -14,18 +14,9 @@ var Service = function(params) {
   debuglog.isEnabled && debuglog(' + constructor begin ...');
 
   params = params || {};
-
   var self = this;
 
-  self.logger = params.loggingFactory.getLogger();
-
-  self.getSandboxName = function() {
-    return params.sandboxName;
-  };
-
-  var pluginCfg = lodash.get(params, ['sandboxConfig', 'plugins', 'appWebinject'], {});
-  debuglog.isEnabled && debuglog(' - appWebinject config: %s', JSON.stringify(pluginCfg));
-
+  var pluginCfg = params.sandboxConfig;
   var contextPath = pluginCfg.contextPath || '/webinject';
   var express = params.webweaverService.express;
 
@@ -65,18 +56,6 @@ Service.argumentSchema = {
   "id": "webinjectExample",
   "type": "object",
   "properties": {
-    "sandboxName": {
-      "type": "string"
-    },
-    "sandboxConfig": {
-      "type": "object"
-    },
-    "profileConfig": {
-      "type": "object"
-    },
-    "loggingFactory": {
-      "type": "object"
-    },
     "webinjectService": {
       "type": "object"
     },
