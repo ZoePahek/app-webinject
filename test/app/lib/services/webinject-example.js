@@ -21,7 +21,7 @@ var Service = function(params) {
   var express = params.webweaverService.express;
 
   params.webinjectService.enqueue({
-    interceptUrls: ['/webinject-bdd/index(.*)'],
+    interceptUrls: [contextPath + '/index(.*)'],
     bodySuffixTags: {
       sidebarStyle: {
         type: 'script',
@@ -33,7 +33,7 @@ var Service = function(params) {
   });
 
   params.webinjectService.enqueue({
-    interceptUrls: ['/webinject-bdd/index', '/webinject-bdd/index1.html'],
+    interceptUrls: [contextPath + '/index', contextPath + '/index1.html'],
     headSuffixTags: {
       sidebarStyle: {
         type: 'css',
@@ -45,7 +45,7 @@ var Service = function(params) {
   });
 
   params.webinjectService.enqueue({
-    interceptUrls: ['/webinject-bdd/index', '/webinject-bdd/index2.html'],
+    interceptUrls: [contextPath + '/index', contextPath + '/index2.html'],
     headSuffixTags: {
       sidebarStyle: {
         type: 'css',
