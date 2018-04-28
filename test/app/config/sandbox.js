@@ -1,4 +1,6 @@
-var contextPath = '/webinject-bdd';
+'use strict';
+
+var contextPath = '/webinject-example';
 
 module.exports = {
   application: {

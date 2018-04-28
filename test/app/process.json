@@ -1,11 +1,8 @@
 {
   "apps": [{
-    "name": "app-webinject-bdd",
+    "name": "app-webinject-example",
     "script": "test/app",
     "watch": true,
-    "env": {
-      "NODE_DEVEBOT_PROFILE": "testbdd",
-      "NODE_DEVEBOT_SANDBOX": "test"
-    }
+    "env": {}
   }]
 }

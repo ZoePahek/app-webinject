@@ -1,17 +1,15 @@
 'use strict';
 
-var events = require('events');
-var util = require('util');
-var fs = require('fs');
-var path = require('path');
 var Devebot = require('devebot');
 var Promise = Devebot.require('bluebird');
 var lodash = Devebot.require('lodash');
-var debug = Devebot.require('debug');
-var debuglog = debug('appWebinject:example');
+var debugx = Devebot.require('pinbug')('app-webinject:example');
+var fs = require('fs');
+var path = require('path');
+var util = require('util');
 
 var Service = function(params) {
-  debuglog.isEnabled && debuglog(' + constructor begin ...');
+  debugx.enabled && debugx(' + constructor begin ...');
 
   params = params || {};
   var self = this;
@@ -73,20 +71,9 @@ var Service = function(params) {
     middleware: router
   }]);
 
-  debuglog.isEnabled && debuglog(' - constructor end!');
+  debugx.enabled && debugx(' - constructor end!');
 };
 
-Service.argumentSchema = {
-  "id": "webinjectExample",
-  "type": "object",
-  "properties": {
-    "webinjectService": {
-      "type": "object"
-    },
-    "webweaverService": {
-      "type": "object"
-    }
-  }
-};
+Service.referenceList = ["webinjectService", "webweaverService"];
 
 module.exports = Service;

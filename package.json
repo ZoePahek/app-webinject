@@ -20,19 +20,18 @@
     "devebot-plugin"
   ],
   "peerDependencies": {
-    "app-webweaver": "^0.2.1",
-    "devebot": "^0.2.1"
+    "app-webweaver": "^0.2.2",
+    "devebot": "^0.2.6"
   },
   "dependencies": {
-    "app-webweaver": "^0.2.1",
+    "app-webweaver": "^0.2.2",
     "cheerio": "^0.22.0",
-    "devebot": "^0.2.1",
+    "devebot": "^0.2.6",
     "express-interceptor": "^1.2.0",
     "path-to-regexp": "^2.1.0",
-    "tamper": "^0.1.0",
-    "uuid": "^3.1.0"
+    "tamper": "^0.1.0"
   },
   "devDependencies": {
-    "chai": "^3.5.0"
+    "mocha": "^5.1.1"
   }
 }
